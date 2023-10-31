@@ -1,6 +1,11 @@
+import { useSelector } from 'react-redux';
+
 function Greetings() {
+  const greetings = useSelector((state) => state.greetings.greetings);
   return (
-    <p>♥</p>
+    <>
+      { randomGreeting.message }
+    </>
   );
 }
 

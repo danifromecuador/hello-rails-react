@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Greetings from './components/Greetings'
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
+import { getGreetings } from "./src/redux/greetings/greetingsSlice"; 
+
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
     </>
   );
 }
+
+store.dispatch(getGreetings());
 
 ReactDOM.render(
   <Provider store={store}>
