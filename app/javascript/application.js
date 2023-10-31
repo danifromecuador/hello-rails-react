@@ -7,6 +7,8 @@ import ReactDOM from 'react-dom';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Greetings from './components/Greetings'
+import { Provider } from 'react-redux';
+import store from './src/redux/store';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
 }
 
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root'),
 );
